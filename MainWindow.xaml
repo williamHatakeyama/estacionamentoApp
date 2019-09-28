@@ -1,0 +1,34 @@
+﻿<Window x:Class="estacionamentoApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:estacionamentoApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" MinWidth="800" MinHeight="450" MaxWidth="800" MaxHeight="450">
+    <Grid ShowGridLines="False" Margin="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110" x:Name="ColunButtons"/>
+            <ColumnDefinition Width="auto" x:Name="ColunPanel" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+
+        </Grid.RowDefinitions>
+        <Frame Grid.Column="1" x:Name="MainFrame" NavigationUIVisibility="Hidden"></Frame>
+        <StackPanel Grid.Column="0"  Grid.Row="0" Height="auto" Width="auto">
+            <Button x:Name="CadastroCliente" Content="Cad.Cliente" Grid.Row="0" Margin="10" Background="#FFE06E0F" OpacityMask="Black" Foreground="White" BorderBrush="{x:Null}" Click="CadastroCliente_Click"/>
+            <Button x:Name="CadastroCrro" Content="Cad.Carro" Grid.Row="3"  Margin="10" Background="#FFE06E0F" OpacityMask="Black" Foreground="White" BorderBrush="{x:Null}" Click="CadastroCrro_Click"></Button>
+            <Button x:Name="EditarCliente" Content="Edt\del.Cliente" Grid.Row="3"  Margin="10" Background="#FFE06E0F" OpacityMask="Black" Foreground="White" BorderBrush="{x:Null}" Click="EditarCliente_Click"></Button>
+            <Button x:Name="EditarCarro" Content="Edt\del.Carro" Grid.Row="3"  Margin="10" Background="#FFE06E0F" OpacityMask="Black" Foreground="White" BorderBrush="{x:Null}" Click="EditarCarro_Click"></Button>
+            <Button x:Name="ListarCliente" Content="Clientes" Grid.Row="3"  Margin="10" Background="#FFE06E0F" OpacityMask="Black" Foreground="White" BorderBrush="{x:Null}" Click="ListarCliente_Click"></Button>
+            <Button x:Name="ListarCarro" Content="Carros" Grid.Row="3"  Margin="10" Background="#FFE06E0F" OpacityMask="Black" Foreground="White" BorderBrush="{x:Null}" Click="ListarCarro_Click"></Button>
+            <Button x:Name="ValoresEst" Content="Valores"  Margin="10" Background="#FFE06E0F" OpacityMask="Black" Foreground="White" BorderBrush="{x:Null}" Click="ValoresEst_Click"/>
+
+
+
+
+
+        </StackPanel>
+    </Grid>
+</Window>

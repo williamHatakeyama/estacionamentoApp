@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="estacionamentoApp.View.Cadastro.CADValores"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:estacionamentoApp.View.Cadastro"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <TextBox x:Name="txtMinuto" HorizontalAlignment="Left" Height="32" Margin="147,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165"/>
+        <TextBox x:Name="txtMeiaHora" HorizontalAlignment="Left" Height="32" Margin="147,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165"/>
+        <TextBox x:Name="txtHora" HorizontalAlignment="Left" Height="31" Margin="147,152,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165"/>
+        <Label x:Name="label" Content="Valor Minuto" HorizontalAlignment="Left" Margin="40,74,0,0" VerticalAlignment="Top" Height="36" Width="102"/>
+        <Label x:Name="label1" Content="Valor Meia Hora" HorizontalAlignment="Left" Margin="40,107,0,0" VerticalAlignment="Top" Height="37" Width="102"/>
+        <Label x:Name="label2" Content="Valor Hora" HorizontalAlignment="Left" Margin="40,147,0,0" VerticalAlignment="Top" Height="36" Width="102"/>
+        <Label x:Name="lblidd" Content="ID" HorizontalAlignment="Left" Margin="40,33,0,0" VerticalAlignment="Top" Height="36" Width="102"/>
+        <Button x:Name="btnCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="147,259,0,0" VerticalAlignment="Top" Width="120" Background="#FFF0A727" Click="BtnCadastrar_Click"/>
+        <TextBox x:Name="textIDV" HorizontalAlignment="Left" Height="32" Margin="147,33,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" IsEnabled="False"/>
+    </Grid>
+</UserControl>
