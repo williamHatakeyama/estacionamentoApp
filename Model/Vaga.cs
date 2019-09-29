@@ -12,9 +12,8 @@ namespace estacionamentoApp.Model
         [Key]
         public int idVaga { get; set; }
         public bool disponivel { get; set; }
-
-        public Carro Carro { get; set; }
         public DateTime ocupadoDesde { get; set; }
+        //public List<RegistroCarro> RegistroCarro { get; set; }
         public List<RegistroCarro> RegistroCarro { get; set; }
 
 

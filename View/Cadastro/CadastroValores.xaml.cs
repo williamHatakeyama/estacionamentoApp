@@ -28,16 +28,7 @@ namespace estacionamentoApp.View.Cadastro
 
             InitializeComponent();
             textIDV.Text = "123321";
-            int ultimo = DAL.ValorDAO.UltimoRegistroValor();
-            if (ultimo != 0)
-            {
-                textIDV.Text = Convert.ToString(ultimo);
-
-            }
-            else
-            {
-                textIDV.Text = "0";
-            }
+          
         }
 
         private void BtnCadastrar_Click(object sender, RoutedEventArgs e)

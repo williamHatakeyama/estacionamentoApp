@@ -23,6 +23,18 @@ namespace estacionamentoApp.DAL
             ctx.SaveChanges();
         }
         public static List<Carro> ListarCarros() => ctx.Carros.Include("Clientes").ToList();
+        public static void RemoverCarrosComCliente(int id)
+        {
+            foreach (Carro carro in ListarCarros())
+            {
+                if (carro.Clientes.idCliente == id)
+                {
+                    ctx.Carros.Remove(carro);
+                }
+            }
+            ctx.SaveChanges();
+        }
+
         public static Carro BuscarCarroPorPlaca(Carro p)
         {
             //FirstOrDefault: é o metodo que retorna o

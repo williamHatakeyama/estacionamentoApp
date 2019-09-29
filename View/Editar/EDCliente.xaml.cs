@@ -31,6 +31,7 @@ namespace estacionamentoApp.View.Editar
             Cliente c = DAL.ClienteDAO.BuscarClientePorCPFString(txtCPF.Text);
             try
             {
+                DAL.CarroDAO.RemoverCarrosComCliente(c.idCliente);
                 DAL.ClienteDAO.RemoverCliente(c);
                 //remover todos carros tmb
                 MessageBox.Show("Cliente removido com sucesso!",

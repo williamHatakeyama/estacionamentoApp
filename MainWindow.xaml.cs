@@ -58,5 +58,15 @@ namespace estacionamentoApp
         {
             MainFrame.Content = new View.Editar.EDCarro();
         }
+
+        private void Vagas_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content = new View.Cadastro.CadastroVaga();
+        }
+
+        private void VagasOn_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content = new View.EntradaVeiculo();
+        }
     }
 }

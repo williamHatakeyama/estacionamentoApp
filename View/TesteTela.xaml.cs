@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace estacionamentoApp.View.Editar
+namespace estacionamentoApp.View
 {
     /// <summary>
-    /// Interação lógica para EDValores.xam
+    /// Interação lógica para TesteTela.xam
     /// </summary>
-    public partial class EDValores : UserControl
+    public partial class TesteTela : UserControl
     {
-        public EDValores()
+        public TesteTela()
         {
             InitializeComponent();
         }

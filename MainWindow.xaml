@@ -24,6 +24,8 @@
             <Button x:Name="ListarCliente" Content="Clientes" Grid.Row="3"  Margin="10" Background="#FFE06E0F" OpacityMask="Black" Foreground="White" BorderBrush="{x:Null}" Click="ListarCliente_Click"></Button>
             <Button x:Name="ListarCarro" Content="Carros" Grid.Row="3"  Margin="10" Background="#FFE06E0F" OpacityMask="Black" Foreground="White" BorderBrush="{x:Null}" Click="ListarCarro_Click"></Button>
             <Button x:Name="ValoresEst" Content="Valores"  Margin="10" Background="#FFE06E0F" OpacityMask="Black" Foreground="White" BorderBrush="{x:Null}" Click="ValoresEst_Click"/>
+            <Button x:Name="Vagas" Content="Edt\Vagas"  Margin="10" Background="#FFE06E0F" OpacityMask="Black" Foreground="White" BorderBrush="{x:Null}" Click="Vagas_Click"/>
+            <Button x:Name="VagasOn" Content="Vagas"  Margin="10" Background="#FFE06E0F" OpacityMask="Black" Foreground="White" BorderBrush="{x:Null}" Click="VagasOn_Click" />
 
 
 

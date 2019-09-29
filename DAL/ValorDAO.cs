@@ -28,7 +28,7 @@ namespace estacionamentoApp.DAL
         public static int UltimoRegistroValor()
         {
             int x  = ListarRegistroValor().Last().idValor;
-            if (x != 0 )
+            if (x != 0)
             {
                 return x;
             }
@@ -54,6 +54,12 @@ namespace estacionamentoApp.DAL
         {
             ctx.Entry(p).State = EntityState.Modified;
             ctx.SaveChanges();
+        }
+        public static RegistroValor BuscaRegistroPorID(int p)
+        {
+
+            return ctx.RegistroValor.FirstOrDefault
+                (x => x.idValor ==  p);
         }
     }
 }

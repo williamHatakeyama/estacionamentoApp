@@ -21,6 +21,13 @@ namespace estacionamentoApp.Model
         //public RegistroCarro registroCarro { get; set; }
         public DateTime CriadoEm { get; set; }
 
+        public virtual string placaR
+        {
+            get
+            {
+                return Convert.ToString(placa);
+            }
+        }
         public virtual string idCliente
         {
             get

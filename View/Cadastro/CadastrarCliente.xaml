@@ -12,11 +12,11 @@
         <TextBox x:Name="txtCPF" HorizontalAlignment="Left" Height="31" Margin="140,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165"/>
         <TextBox x:Name="txtTelefone" HorizontalAlignment="Left" Height="32" Margin="140,152,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165"/>
         <TextBox x:Name="txtIdade" HorizontalAlignment="Left" Height="32" Margin="140,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165"/>
-        <Label x:Name="label" Content="Nome" HorizontalAlignment="Left" Margin="33,36,0,0" VerticalAlignment="Top" Height="36" Width="52"/>
-        <Label x:Name="label1" Content="Sobrenome" HorizontalAlignment="Left" Margin="33,69,0,0" VerticalAlignment="Top" Height="37" Width="52"/>
-        <Label x:Name="label2" Content="CPF" HorizontalAlignment="Left" Margin="33,109,0,0" VerticalAlignment="Top" Height="36" Width="52"/>
-        <Label x:Name="label3" Content="Telefone" HorizontalAlignment="Left" Margin="33,152,0,0" VerticalAlignment="Top" Height="36" Width="52"/>
-        <Label x:Name="label4" Content="Idade" HorizontalAlignment="Left" Margin="33,185,0,0" VerticalAlignment="Top" Height="37" Width="52"/>
+        <Label x:Name="label" Content="Nome" HorizontalAlignment="Left" Margin="33,36,0,0" VerticalAlignment="Top" Height="36" Width="79"/>
+        <Label x:Name="label1" Content="Sobrenome" HorizontalAlignment="Left" Margin="33,69,0,0" VerticalAlignment="Top" Height="37" Width="79"/>
+        <Label x:Name="label2" Content="CPF" HorizontalAlignment="Left" Margin="33,109,0,0" VerticalAlignment="Top" Height="36" Width="79"/>
+        <Label x:Name="label3" Content="Telefone" HorizontalAlignment="Left" Margin="33,152,0,0" VerticalAlignment="Top" Height="36" Width="79"/>
+        <Label x:Name="label4" Content="Idade" HorizontalAlignment="Left" Margin="33,185,0,0" VerticalAlignment="Top" Height="37" Width="79"/>
         <Button x:Name="btnCadastrar" Content="Cadastrar" Margin="33,257,509,77" VerticalAlignment="Center" Width="120" HorizontalAlignment="Center" Height="24" Background="#FFF0A727" BorderBrush="{x:Null}" RenderTransformOrigin="0,0.5" Click="BtnCadastrar_Click"/>
 
     </Grid>
