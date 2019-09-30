@@ -7,13 +7,13 @@ namespace estacionamentoApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.3.0")]
-    public sealed partial class db290920190123 : IMigrationMetadata
+    public sealed partial class db290920191609 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(db290920190123));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(db290920191609));
         
         string IMigrationMetadata.Id
         {
-            get { return "201909290423374_db290920190123"; }
+            get { return "201909291909462_db290920191609"; }
         }
         
         string IMigrationMetadata.Source

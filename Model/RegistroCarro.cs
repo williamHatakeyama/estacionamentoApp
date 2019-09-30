@@ -12,6 +12,7 @@ namespace estacionamentoApp.Model
     {
         [Key]
         public int idRegistro { get; set; }
+        public bool on{ get; set; }
         public Carro Carro { get; set; }
         public Vaga Vaga { get; set; }
         public RegistroValor RegistroValor { get; set; }
@@ -19,19 +20,40 @@ namespace estacionamentoApp.Model
         public DateTime horaSaida { get; set; }
         public double valorTotal { get; set; }
 
-
+        public virtual string vagaON
+        {
+            get
+            {
+                if (on == true)
+                {
+                    return Convert.ToString("Ativo");
+                }
+                else
+                {
+                    return Convert.ToString("Desativado");
+                }
+                
+            }
+        }
+        public virtual string idVaga
+        {
+            get
+            {
+                return Convert.ToString(Vaga.idVaga);
+            }
+        }
+        public virtual string idCarro
+        {
+            get
+            {
+                return Convert.ToString(Carro.idCarro);
+            }
+        }
         public virtual string placa
         {
             get
             {
                 return Carro.placaR;
-            }
-        }
-        public virtual string cliente
-        {
-            get
-            {
-                return Convert.ToString(Carro.Clientes.nome + " " + Carro.Clientes.nome);
             }
         }
         public virtual string disponivel
@@ -41,6 +63,12 @@ namespace estacionamentoApp.Model
                 return Convert.ToString(Vaga.disponivel);
             }
         }
-
+        public virtual string idValor
+        {
+            get
+            {
+                return Convert.ToString(RegistroValor.idValor);
+            }
+        }
     }
 }

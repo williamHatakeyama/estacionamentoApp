@@ -24,11 +24,15 @@ namespace estacionamentoApp.View.Listar
         {
             InitializeComponent();
 
-            dtgCarro.ItemsSource = DAL.CarroDAO.ListarCarros();
-            dtgCarro.DisplayMemberPath = "Clientes";
+
             
 
 
+        }
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            dtgCarro.ItemsSource = DAL.CarroDAO.ListarCarros();
+            dtgCarro.DisplayMemberPath = "Clientes";
         }
     }
 }

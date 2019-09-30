@@ -1,6 +1,7 @@
 ﻿using estacionamentoApp.Model;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,12 +25,15 @@ namespace estacionamentoApp.DAL
                 return false;
                 throw;
             }
-            
+
         }
 
-        //public static List<RegistroCarro> ListarRegCarros() => ctx.RegistroCarro.Include("Carro").Include("Cliente").ToList();
-        public static List<RegistroCarro> ListarRegCarros() => ctx.RegistroCarro.Include("Carro").Include("Cliente").ToList(); //Include("Carro").ToList();
+        public static List<RegistroCarro> ListarRegCarros() => ctx.RegistroCarro.Include("Vaga").Include("Carro").Include("RegistroValor").ToList();
+        public static List<RegistroCarro> ListarRegCarrosEstacionados()
+        {
+            return ctx.RegistroCarro.Include("Vaga").Include("Carro").Include("RegistroValor").Where(x => x.on == true).ToList();
 
+        }
         public static bool ValidaSeTemReg()
         {
             int x = ctx.RegistroCarro.Count();
@@ -43,21 +47,24 @@ namespace estacionamentoApp.DAL
             }
         }
 
-        //public static Cliente verificaListaVazia()
-        //{
-        //    ctx.RegistroCarro.FirstOrDefault(x=> x.idRegistro == x.)
-        //    return ctx.Clientes.FirstOrDefault
-        //        (x => x.cpf.Equals(p.cpf));
-
-        //    //SingleOrDefault: é o metodo que retorna um
-        //    //ÚNICO objeto na busca
-        //    //return ctx.Clientes.SingleOrDefault
-        //    //    (x => x.cpf.Equals(p));
-        //}
+        public static void AlterarRegistroCarro(RegistroCarro p)
+        {
+            ctx.Entry(p).State = EntityState.Modified;
+            ctx.SaveChanges();
+        }
 
 
+        public static RegistroCarro BuscarRegistroPorId(int p)
+        {
+            //FirstOrDefault: é o metodo que retorna o
+            //PRIMEIRO objeto na busca
+            return ctx.RegistroCarro.FirstOrDefault(x => x.idRegistro == p);
 
-
+            //SingleOrDefault: é o metodo que retorna um
+            //ÚNICO objeto na busca 
+            //return ctx.Carros.SingleOrDefault
+            //    (x => x.Nome.Equals(p.Nome));
+        }
 
     }
 }

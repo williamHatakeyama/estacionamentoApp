@@ -17,12 +17,17 @@ namespace estacionamentoApp.Model
         public string telefone { get; set; }
         public int idade { get; set; }
         public List<Carro> Carros { get; set; }
+        public List<RegistroCarro> registroCarros { get; set; }
         //public List<RegistroCarro> RegistroCarro { get; set; }
         public DateTime CriadoEm { get; set; }
 
-        public override string ToString()
+
+        public virtual string nomeCliente
         {
-            return base.ToString();
+            get
+            {
+                return Convert.ToString(nome + " " +sobrenome);
+            }
         }
 
     }

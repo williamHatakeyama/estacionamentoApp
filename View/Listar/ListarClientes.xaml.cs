@@ -25,6 +25,10 @@ namespace estacionamentoApp.View.Listar
         {
             InitializeComponent();
 
+
+        }
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
             dtgCliente.ItemsSource = DAL.ClienteDAO.ListarClientes();
             dtgCliente.UpdateLayout();
         }

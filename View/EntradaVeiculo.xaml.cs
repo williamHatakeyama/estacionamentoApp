@@ -1,6 +1,7 @@
 ﻿using estacionamentoApp.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,8 +45,9 @@ namespace estacionamentoApp.View
                 registroCarro.horaEntrada = DateTime.Now;
                 registroCarro.horaSaida = DateTime.Now;
                 registroCarro.valorTotal = 0;
-                registroCarro.Vaga.disponivel = false;
-                DAL.VagaDAO.AlterarVaga(registroCarro.Vaga);
+                registroCarro.on = true;
+                //registroCarro.Vaga.disponivel = false;
+                //DAL.VagaDAO.AlterarVaga(registroCarro.Vaga);
                 bool x = DAL.RegistroCarroDAO.CadastrarRegCarro(registroCarro);
 
                 if (x == true)
@@ -70,7 +72,36 @@ namespace estacionamentoApp.View
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            dtaVagas.ItemsSource = DAL.RegistroCarroDAO.ListarRegCarros();
+            dtaEV.ItemsSource = DAL.RegistroCarroDAO.ListarRegCarrosEstacionados();
+        }
+
+
+        private void DtaEV_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            dynamic d = dtaEV.SelectedItem;
+            RegistroCarro r = DAL.RegistroCarroDAO.BuscarRegistroPorId(d.idRegistro);
+            r.horaSaida = DateTime.Now;
+            double minutoTotal = (r.horaSaida - r.horaEntrada).TotalMinutes;
+
+            r.valorTotal = Convert.ToDouble((minutoTotal * r.RegistroValor.valorMinuto));
+            MessageBox.Show(Convert.ToString(r.valorTotal));
+
+            //MessageBox.Show(Convert.ToString(valorT));
+
+            lblHE.Content = Convert.ToString(r.horaEntrada);
+            lblHS.Content = Convert.ToString(r.horaSaida);
+            lblPlaca.Content = d.Carro.placa;
+            lblTotal.Content = Convert.ToString(r.valorTotal);
+            DAL.RegistroCarroDAO.AlterarRegistroCarro(r);
+        }
+
+        private void BtnFecharCarro_Click(object sender, RoutedEventArgs e)
+        {
+            dynamic d = dtaEV.SelectedItem;
+            RegistroCarro r = DAL.RegistroCarroDAO.BuscarRegistroPorId(d.idRegistro);
+            r.on = false;
+            DAL.RegistroCarroDAO.AlterarRegistroCarro(r);
+            UserControl_Loaded(sender, e);
         }
     }
 }
