@@ -1,4 +1,4 @@
-﻿    using estacionamentoApp.Model;
+﻿using estacionamentoApp.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,31 +28,41 @@ namespace estacionamentoApp.View
 
         private void BtnCadastrar_Click(object sender, RoutedEventArgs e)
         {
-            Cliente c = new Cliente();
-            c.nome = txtNome.Text;
-            c.sobrenome = txtSobrenome.Text;
-            c.cpf = txtCPF.Text;
-            c.telefone = txtTelefone.Text;
-            c.idade = Convert.ToInt32(txtIdade.Text);
-            c.CriadoEm = DateTime.Now;
-            try
+            if (!txtNome.Text.Equals("") && !txtSobrenome.Text.Equals("") && !txtTelefone.Text.Equals("") &&  !txtIdade.Text.Equals("") && !txtCPF.Text.Equals("") && !txtSexo.Text.Equals(""))
             {
-                DAL.ClienteDAO.CadastrarCliente(c);
-                MessageBox.Show("Cliente cadastrado com sucesso!",
-                                   "Estacionamento App",
-                                     MessageBoxButton.OK,
-                                      MessageBoxImage.Information);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Cliente não cadastrado!",
-                                   "Estacionamento App",
-                                     MessageBoxButton.OK,
-                                      MessageBoxImage.Information);
-                throw;
-            }
 
 
+                Cliente c = new Cliente();
+                c.nome = txtNome.Text;
+                c.sobrenome = txtSobrenome.Text;
+                c.cpf = txtCPF.Text;
+                c.telefone = txtTelefone.Text;
+                c.sexo = txtSexo.Text;
+                c.idade = Convert.ToInt32(txtIdade.Text);
+                c.CriadoEm = DateTime.Now;
+                try
+                {
+                    DAL.ClienteDAO.CadastrarCliente(c);
+                    MessageBox.Show("Cliente cadastrado com sucesso!",
+                                       "Estacionamento App",
+                                         MessageBoxButton.OK,
+                                          MessageBoxImage.Information);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Cliente não cadastrado!",
+                                       "Estacionamento App",
+                                         MessageBoxButton.OK,
+                                          MessageBoxImage.Information);
+                    throw;
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("preencha todos campos!");
+            }
         }
     }
 }

@@ -20,6 +20,8 @@
         <Button x:Name="btnBuscar" Content="Buscar" HorizontalAlignment="Left" Margin="162,64,0,0" VerticalAlignment="Top" Width="120" Background="#FFF0A727" Click="BtnBuscar_Click"/>
         <Button x:Name="btnAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="105,305,0,0" VerticalAlignment="Top" Width="120" Background="#FFF0A727" Click="BtnAlterar_Click" />
         <Button x:Name="btnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="249,305,0,0" VerticalAlignment="Top" Width="120" Background="#FFF0A727" Click="BtnExcluir_Click"/>
+        <TextBox x:Name="lblSexo" HorizontalAlignment="Left" Height="32" Margin="470,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165"/>
+        <Label x:Name="label4_Copy" Content="Sexo" HorizontalAlignment="Left" Margin="363,98,0,0" VerticalAlignment="Top" Height="37" Width="52"/>
 
     </Grid>
 </UserControl>

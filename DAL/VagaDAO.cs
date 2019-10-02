@@ -41,6 +41,13 @@ namespace estacionamentoApp.DAL
 
 
         }
+        
+        public static int listaNumVagasLivres()
+        {
+            List<Vaga> lista = ctx.Vagas.Where(x=>x.disponivel==true).ToList();
+            return  lista.Count();
+        }
+
         public static bool CadastrarVaga1(string u)
         {
             if (u.Equals("uma"))

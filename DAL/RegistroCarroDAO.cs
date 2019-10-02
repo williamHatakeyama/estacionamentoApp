@@ -28,6 +28,20 @@ namespace estacionamentoApp.DAL
 
         }
 
+        public static bool validaSeTaEstacionado(string placa)
+        {
+
+            RegistroCarro a = ListarRegCarros().Find(x => x.Carro.placa == placa && x.Vaga.disponivel == false);
+            if (a == null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public static List<RegistroCarro> ListarRegCarros() => ctx.RegistroCarro.Include("Vaga").Include("Carro").Include("RegistroValor").ToList();
         public static List<RegistroCarro> ListarRegCarrosEstacionados()
         {

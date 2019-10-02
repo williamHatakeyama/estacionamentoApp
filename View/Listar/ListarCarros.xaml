@@ -11,7 +11,6 @@
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID Carro" Binding="{Binding idCarro}"/>
-                <DataGridTextColumn Header="ID Cliente" Binding="{Binding idCliente}" />
                 <DataGridTextColumn Header="Cli Nome" Binding="{Binding nomeCompletoCliente}" />
                 <DataGridTextColumn Header="Placa" Binding="{Binding placa}" />
                 <DataGridTextColumn Header="Cor" Binding="{Binding cor}" />

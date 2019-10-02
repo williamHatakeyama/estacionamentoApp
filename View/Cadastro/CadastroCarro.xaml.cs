@@ -28,31 +28,36 @@ namespace estacionamentoApp.View.Cadastro
 
         private void btnCadastrar_Click(object sender, RoutedEventArgs e)
         {
-            Carro c = new Carro();
-            Cliente cl = new Cliente();
-            cl.cpf = txtCpf.Text;
-            c.placa = txtPlaca.Text;
-            c.cor = txtCor.Text;
-            c.ano = Convert.ToInt32(txtAno.Text);
-            c.modelo = txtModelo.Text;
-            c.CriadoEm = DateTime.Now;
-            cl = DAL.ClienteDAO.BuscarClientePorCPF(cl);
-            if (cl != null)
+            if (!txtAno.Text.Equals("") && !txtCor.Text.Equals("") && !txtCpf.Text.Equals("") && !txtModelo.Text.Equals("") && !txtPlaca.Text.Equals(""))
             {
-                c.Clientes = cl;
-                DAL.CarroDAO.CadastrarCarro(c);
-                MessageBox.Show("Carro cadastrado com sucesso!",
-                                   "Estacionamento App",
-                                     MessageBoxButton.OK,
-                                      MessageBoxImage.Information);
-            }
-            else
-            {
-                DAL.CarroDAO.CadastrarCarro(c);
-                MessageBox.Show("Erro ao cadastrar!",
-                                   "Estacionamento App",
-                                     MessageBoxButton.OK,
-                                      MessageBoxImage.Information);
+
+
+                Carro c = new Carro();
+                Cliente cl = new Cliente();
+                cl.cpf = txtCpf.Text;
+                c.placa = txtPlaca.Text;
+                c.cor = txtCor.Text;
+                c.ano = Convert.ToInt32(txtAno.Text);
+                c.modelo = txtModelo.Text;
+                c.CriadoEm = DateTime.Now;
+                cl = DAL.ClienteDAO.BuscarClientePorCPF(cl);
+                if (cl != null)
+                {
+                    c.Clientes = cl;
+                    DAL.CarroDAO.CadastrarCarro(c);
+                    MessageBox.Show("Carro cadastrado com sucesso!",
+                                       "Estacionamento App",
+                                         MessageBoxButton.OK,
+                                          MessageBoxImage.Information);
+                }
+                else
+                {
+                    DAL.CarroDAO.CadastrarCarro(c);
+                    MessageBox.Show("Erro ao cadastrar!",
+                                       "Estacionamento App",
+                                         MessageBoxButton.OK,
+                                          MessageBoxImage.Information);
+                }
             }
         }
 

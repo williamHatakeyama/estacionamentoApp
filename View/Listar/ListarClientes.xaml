@@ -16,6 +16,7 @@
                 <DataGridTextColumn Header="Telefone" Binding="{Binding telefone}" />
                 <DataGridTextColumn Header="Idade" Binding="{Binding idade}" />
                 <DataGridTextColumn Header="Registrado Em" Binding="{Binding CriadoEm}" />
+                <DataGridTextColumn Header="Sexo" Binding="{Binding sexo}" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

@@ -16,6 +16,7 @@ namespace estacionamentoApp.Model
         public string cpf { get; set; }
         public string telefone { get; set; }
         public int idade { get; set; }
+        public string sexo { get; set; }
         public List<Carro> Carros { get; set; }
         public List<RegistroCarro> registroCarros { get; set; }
         //public List<RegistroCarro> RegistroCarro { get; set; }

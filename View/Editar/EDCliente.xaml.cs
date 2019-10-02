@@ -54,6 +54,7 @@ namespace estacionamentoApp.View.Editar
             Cliente c = DAL.ClienteDAO.BuscarClientePorCPFString(txtCPF.Text);
             txtNome.Text = c.nome;
             txtSobrenome.Text = c.sobrenome;
+            lblSexo.Text = c.sexo;
             txtTelefone.Text = c.telefone;
             txtIdade.Text = Convert.ToString(c.idade);
         }
@@ -64,6 +65,7 @@ namespace estacionamentoApp.View.Editar
             c.nome = txtNome.Text;
             c.sobrenome = txtSobrenome.Text;
             c.telefone = txtTelefone.Text;
+            c.sexo = lblSexo.Text;
             c.idade = Convert.ToInt32(txtIdade.Text);
             
             try

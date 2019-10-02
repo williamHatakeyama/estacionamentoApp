@@ -68,5 +68,10 @@ namespace estacionamentoApp
         {
             MainFrame.Content = new View.EntradaVeiculo();
         }
+
+        private void Inform_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content = new View.Listar.InformacoesGerais();
+        }
     }
 }

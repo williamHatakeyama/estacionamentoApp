@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace estacionamentoApp.View.Listar
 {
     /// <summary>
-    /// Interação lógica para ListarCarros.xam
+    /// Interação lógica para InformacoesGerais.xam
     /// </summary>
-    public partial class ListarCarros : UserControl
+    public partial class InformacoesGerais : UserControl
     {
-        public ListarCarros()
+        public InformacoesGerais()
         {
             InitializeComponent();
-
-
-            
-
-
-        }
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
-        {
-            dtgCarro.ItemsSource = DAL.CarroDAO.ListarCarros();
-            //dtgCarro.DisplayMemberPath = "Clientes";
         }
     }
 }

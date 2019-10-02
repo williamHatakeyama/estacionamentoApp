@@ -26,6 +26,7 @@
             <Button x:Name="ValoresEst" Content="Valores"  Margin="10" Background="#FFE06E0F" OpacityMask="Black" Foreground="White" BorderBrush="{x:Null}" Click="ValoresEst_Click"/>
             <Button x:Name="Vagas" Content="Edt\Vagas"  Margin="10" Background="#FFE06E0F" OpacityMask="Black" Foreground="White" BorderBrush="{x:Null}" Click="Vagas_Click"/>
             <Button x:Name="VagasOn" Content="Vagas"  Margin="10" Background="#FFE06E0F" OpacityMask="Black" Foreground="White" BorderBrush="{x:Null}" Click="VagasOn_Click" />
+            <Button x:Name="inform" Content="Informaçoes"  Margin="10" Background="#FFE06E0F" OpacityMask="Black" Foreground="White" BorderBrush="{x:Null}" Click="Inform_Click" />
 
 
 
